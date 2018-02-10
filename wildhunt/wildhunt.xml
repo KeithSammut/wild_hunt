@@ -1,0 +1,91 @@
+<?xml version="1.0" standalone="no"?>
+
+<tech-tree>
+	<description value="magitech tech tree"/>
+	
+	<attack-types>
+		<attack-type name="slashing"/>
+				<attack-type name="slashing_"/>
+		<attack-type name="piercing"/>
+		<attack-type name="piercing_"/>
+		<attack-type name="piercing__"/>
+		<attack-type name="impact"/>
+		<attack-type name="impact_"/>
+		<attack-type name="impact__"/>
+		<attack-type name="impact___"/>
+		<attack-type name="impact____"/>
+				<attack-type name="piercing___"/>
+	</attack-types>
+	
+	<armor-types>
+		<armor-type name="organic"/>
+		<armor-type name="organic_"/>
+		<armor-type name="organic__"/>
+				<armor-type name="skin"/>
+				<armor-type name="skin_"/>
+				<armor-type name="skin__"/>
+				<armor-type name="skin___"/>
+				<armor-type name="skin____"/>
+				<armor-type name="skin_____"/>
+								<armor-type name="leather"/>
+
+
+
+	</armor-types>
+	
+	<damage-multipliers>
+		<damage-multiplier attack="impact" armor="skin__" value="-900"/>
+		<damage-multiplier attack="impact" armor="skin___" value="-900"/>
+		<damage-multiplier attack="impact" armor="skin____" value="-900"/>
+		<damage-multiplier attack="impact" armor="skin_____" value="-900"/>
+		<damage-multiplier attack="impact" armor="organic" value="-900"/>
+				<damage-multiplier attack="impact" armor="organic__" value="-900"/>
+		<damage-multiplier attack="impact" armor="organic_" value="-900"/>
+				<damage-multiplier attack="impact" armor="leather" value="-900"/>
+
+		
+		<damage-multiplier attack="impact_" armor="skin___" value="-900"/>
+		<damage-multiplier attack="impact_" armor="skin____" value="-900"/>
+		<damage-multiplier attack="impact_" armor="skin_____" value="-900"/>
+		<damage-multiplier attack="impact_" armor="organic" value="-900"/>
+		<damage-multiplier attack="impact_" armor="organic_" value="-900"/>
+				<damage-multiplier attack="impact_" armor="organic__" value="-900"/>
+								<damage-multiplier attack="impact_" armor="leather" value="-900"/>
+		
+		<damage-multiplier attack="impact__" armor="skin____" value="-900"/>
+		<damage-multiplier attack="impact__" armor="skin_____" value="-900"/>
+		<damage-multiplier attack="impact__" armor="organic" value="-900"/>
+		<damage-multiplier attack="impact__" armor="organic_" value="-900"/>
+				<damage-multiplier attack="impact__" armor="organic__" value="-900"/>
+								<damage-multiplier attack="impact__" armor="leather" value="-900"/>
+
+		
+		<damage-multiplier attack="slashing" armor="skin____" value="-900"/>
+		<damage-multiplier attack="slashing" armor="skin_____" value="-900"/>
+		<damage-multiplier attack="slashing" armor="organic_" value="-900"/>
+				<damage-multiplier attack="slashing" armor="organic__" value="-900"/>
+								<damage-multiplier attack="slashing" armor="leather" value="-900"/>
+
+				<damage-multiplier attack="piercing___" armor="organic_" value="-900"/>
+				<damage-multiplier attack="piercing___" armor="organic__" value="-900"/>
+						<damage-multiplier attack="piercing___" armor="skin_____" value="-900"/>
+						<damage-multiplier attack="piercing___" armor="skin____" value="-900"/>
+
+		
+		<damage-multiplier attack="slashing_" armor="organic_" value="-900"/>
+		<damage-multiplier attack="slashing_" armor="skin_____" value="-900"/>
+
+		<damage-multiplier attack="piercing" armor="skin_____" value="-900"/>
+		<damage-multiplier attack="piercing" armor="organic_" value="-900"/>
+				<damage-multiplier attack="piercing" armor="organic__" value="-900"/>
+
+		
+		<damage-multiplier attack="piercing_" armor="organic_" value="-900"/>
+		
+
+
+
+
+		
+	</damage-multipliers>
+</tech-tree>

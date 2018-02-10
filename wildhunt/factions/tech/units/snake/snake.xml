@@ -1,0 +1,200 @@
+<?xml version="1.0" standalone="no"?>
+
+<unit>
+	<parameters>
+		<size value="1"/>
+		<height value="1"/>
+		<max-hp value="450" regeneration="1"/>
+		<max-ep value="0" regeneration="0"/>
+		<armor value="10"/>
+		<armor-type value="leather"/>
+		<sight value="12"/>
+		<time value="70"/>
+		<multi-selection value="true"/>
+		<cellmap value="false"/>
+				<levels>
+		<level name="level_2" kills="70"/>
+		<level name="level_3" kills="85"/>
+				<level name="level_4" kills="100"/>
+		<level name="level_5" kills="125"/>
+		<level name="level_6" kills="150"/>
+		<level name="level_7" kills="190"/>
+
+
+		</levels>
+		<fields>
+			<field value="land"/>
+		</fields>
+		<properties/>
+		<light enabled="false"/>
+		<unit-requirements>
+		</unit-requirements>
+		<upgrade-requirements>
+		</upgrade-requirements>
+		<resource-requirements>
+			<resource name="food" amount="400"/>
+
+		</resource-requirements>
+		<resources-stored>
+			<resource name= "food" amount="550"/>
+
+			
+		</resources-stored>
+		<image path="images/snake.bmp"/>
+		<image-cancel path="images/cancel.bmp"/>
+		<meeting-point value="false"/>
+		<selection-sounds enabled="true">
+
+		</selection-sounds>
+		<command-sounds enabled="true">
+		</command-sounds>
+	</parameters>
+
+	<skills>
+	
+					<skill>
+			<type value="be_built" />
+			<name value="be_built_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="models/snake_standing.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+							<skill>
+			<type value="morph"/>
+			<name value="morph_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="99999999999"/>
+			<anim-speed value="80"/>
+			<animation path="models/snake_standing.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+
+		<skill>
+			<type value="stop"/>
+			<name value="stop_skill"/>
+			<ep-cost value="0"/>
+			<speed value="1000"/>
+			<anim-speed value="40"/>
+			<animation path="models/snake_standing.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+
+		<skill>
+			<type value="move"/>
+			<name value="move_skill"/>
+			<ep-cost value="0"/>
+			<speed value="325"/>
+			<anim-speed value="86"/>
+			<animation path="models/snake_walking.g3d"/>
+						<sound enabled="true" start-time="0">
+				<sound-file path="sounds/rattle.wav"/>
+
+			</sound>
+		</skill>
+
+		<skill>
+			<type value="attack"/>
+			<name value="poison_shot_skill"/>
+			<ep-cost value="0"/>
+			<speed value="75"/>
+			<anim-speed value="75"/>
+			<animation path="models/snake_attacking.g3d"/>
+			<sound enabled="true" start-time="0.5">
+				<sound-file path="sounds/snakehiss.wav"/>
+				<sound-file path="sounds/snake_attack1.wav"/>
+				<sound-file path="sounds/snake_attack2.wav"/>
+				<sound-file path="sounds/snake_attack3.wav"/>
+				<sound-file path="sounds/snake_attack4.wav"/>
+				<sound-file path="sounds/snake_attack5.wav"/>
+
+			</sound> 
+			<attack-strenght value="300"/>
+			<attack-var value="20"/>
+			<attack-range value="1"/>
+			<attack-type value="piercing___"/>
+			<attack-fields>
+				<field value="land"/>
+			</attack-fields>
+			<attack-start-time value="0.62"/>
+			<projectile value="false">
+				<particle value="false" path="particle_proj.xml"/>
+			<sound enabled="true" start-time="0">
+				<sound-file path="sounds/snakehiss.wav"/>
+				<sound-file path="sounds/snake_attack1.wav"/>
+				<sound-file path="sounds/snake_attack2.wav"/>
+				<sound-file path="sounds/snake_attack3.wav"/>
+				<sound-file path="sounds/snake_attack4.wav"/>
+				<sound-file path="sounds/snake_attack5.wav"/>
+
+			</sound> 
+			</projectile>
+			<splash value="false">
+				<radius value="0"/>
+				<damage-all value="false"/>
+				<particle value="false" path="particle_splash.xml"/>
+			</splash>
+		</skill>
+
+		<skill>
+			<type value="die"/>
+			<name value="die_skill"/>
+			<ep-cost value="0"/>
+			<speed value="120"/>
+			<anim-speed value="40"/>
+			<animation path="models/snake_dying.g3d"/>
+			<sound enabled="true" start-time="0">
+				<sound-file path="sounds/rattle.wav"/>
+
+			</sound>
+			<fade value="false"/>
+		</skill>
+
+	</skills>
+
+	<!-- *** commands *** -->
+
+	<commands>
+
+		<command>
+			<type value="stop"/>
+			<name value="stop"/>
+			<image path="images/stop.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+		</command>
+
+		<command>
+			<type value="move"/>
+			<name value="move"/>
+			<image path="images/move.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+		</command>
+
+		<command>
+			<type value="attack"/>
+			<name value="poison_shot"/>
+			<image path="images/snake_attack.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+			<attack-skill value="poison_shot_skill"/>
+		</command>
+		<command>
+			<type value="morph"/>
+			<name value="upgrade_to_lion"/>
+			<image path="../lion/images/horseman.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<morph-skill value="morph_skill"/>
+			<morph-unit name= "lion"/>
+			<discount value="0"/>
+		</command>
+
+	</commands>
+</unit>

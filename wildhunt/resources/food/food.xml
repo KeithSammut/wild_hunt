@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+
+<resource>
+	<image path="images/food.bmp"/>
+	<type value="tech">
+		<model path="models/grass.g3d"/>
+		<default-amount value="10"/>
+		<resource-number value="5"/>
+	</type>
+</resource>

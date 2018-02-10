@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+
+<faction>
+	<starting-resources>
+		<resource name="grass" amount="0"/>
+		<resource name="food" amount="0"/>
+	</starting-resources>
+	<starting-units>
+	</starting-units>
+	<music value="true" path="music/adventure.ogg"/>
+	<flat-particle-positions value="true"/>
+</faction>
