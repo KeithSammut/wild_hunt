@@ -67,7 +67,7 @@
 			<type value="morph"/>
 			<name value="morph_skill"/>		
 			<ep-cost value="0"/>
-			<speed value="99999999999"/>
+			<speed value="99999"/>
 			<anim-speed value="80"/>
 			<animation path="models/alligator.g3d"/>
 						<sound enabled="true" start-time="0">

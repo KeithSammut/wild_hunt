@@ -35,623 +35,366 @@
 setAttackWarningsEnabled(0)
 
 createUnit('rabbit', 0, startLocation(0))
-you=lastCreatedUnit()
-
 createUnit('rabbit', 1, {230, 45})
-r1=lastCreatedUnit()
-
 createUnit('rabbit', 1, {167, 46})
-r2=lastCreatedUnit()
-
 createUnit('rabbit', 1, {186, 100})
-r3=lastCreatedUnit()
-
 createUnit('rabbit', 1, {54, 55})
-r4=lastCreatedUnit()
-
 createUnit('rabbit', 1, {200, 100})
-r5=lastCreatedUnit()
-
 createUnit('rabbit', 1, {157, 200})
-r6=lastCreatedUnit()
-
 createUnit('rabbit', 1, {57, 68})
-r7=lastCreatedUnit()
-
 createUnit('rabbit', 1, {60, 160})
-r8=lastCreatedUnit()
-
 createUnit('rabbit', 2, {230, 45})
-r9=lastCreatedUnit()
-
 createUnit('rabbit', 2, {167, 46})
-r10=lastCreatedUnit()
-
 createUnit('rabbit', 2, {186, 100})
-r11=lastCreatedUnit()
-
 createUnit('rabbit', 2, {54, 55})
-r12=lastCreatedUnit()
-
 createUnit('rabbit', 2, {200, 100})
-r13=lastCreatedUnit()
-
 createUnit('rabbit', 2, {157, 200})
-r14=lastCreatedUnit()
-
 createUnit('rabbit', 2, {57, 68})
-r15=lastCreatedUnit()
-
 createUnit('rabbit', 2, {60, 160})
-r16=lastCreatedUnit()
-
 createUnit('rabbit', 3, {230, 45})
-r17=lastCreatedUnit()
-
 createUnit('rabbit', 3, {167, 46})
-r18=lastCreatedUnit()
-
 createUnit('rabbit', 3, {186, 100})
-r19=lastCreatedUnit()
-
 createUnit('rabbit', 3, {54, 55})
-r20=lastCreatedUnit()
-
 createUnit('rabbit', 3, {200, 100})
-r21=lastCreatedUnit()
-
 createUnit('rabbit', 3, {157, 200})
-r22=lastCreatedUnit()
-
 createUnit('rabbit', 3, {57, 68})
-r23=lastCreatedUnit()
-
 createUnit('rabbit', 3, {60, 160})
-r24=lastCreatedUnit()
-
 createUnit('rabbit', 4, {57, 68})
-r25=lastCreatedUnit()
-
 createUnit('rabbit', 4, {60, 160})
-r26=lastCreatedUnit()
-
 createUnit('rabbit', 4, {57, 68})
-r27=lastCreatedUnit()
-
 createUnit('rabbit', 4, {60, 160})
-r28=lastCreatedUnit()
-
 createUnit('rabbit', 4, {230, 45})
-r29=lastCreatedUnit()
-
 createUnit('rabbit', 4, {167, 46})
-r30=lastCreatedUnit()
-
 createUnit('rabbit', 4, {186, 100})
-r31=lastCreatedUnit()
-
 createUnit('rabbit', 4, {54, 55})
-r32=lastCreatedUnit()
-
 createUnit('rabbit', 5, {200, 100})
-r33=lastCreatedUnit()
-
 createUnit('rabbit', 5, {157, 200})
-r34=lastCreatedUnit()
-
 createUnit('rabbit', 5, {57, 68})
-r35=lastCreatedUnit()
-
 createUnit('rabbit', 5, {60, 160})
-r36=lastCreatedUnit()
-
 createUnit('rabbit', 5, {230, 45})
-r37=lastCreatedUnit()
-
 createUnit('rabbit', 5, {167, 46})
-r38=lastCreatedUnit()
-
 createUnit('rabbit', 5, {186, 100})
-r39=lastCreatedUnit()
-
 createUnit('rabbit', 5, {54, 55})
-r40=lastCreatedUnit()
-
 createUnit('rabbit', 6, {200, 100})
-r41=lastCreatedUnit()
-
 createUnit('rabbit', 6, {157, 200})
-r42=lastCreatedUnit()
-
 createUnit('rabbit', 6, {57, 68})
-r43=lastCreatedUnit()
-
 createUnit('rabbit', 6, {60, 160})
-r44=lastCreatedUnit()
-
 createUnit('rabbit', 6, {230, 45})
-r45=lastCreatedUnit()
-
 createUnit('rabbit', 6, {167, 46})
-r46=lastCreatedUnit()
-
 createUnit('rabbit', 6, {186, 100})
-r47=lastCreatedUnit()
-
 createUnit('rabbit', 6, {54, 55})
-r48=lastCreatedUnit()
-
 createUnit('rabbit', 7, {200, 100})
-r49=lastCreatedUnit()
-
 createUnit('rabbit', 7, {157, 200})
-r50=lastCreatedUnit()
-
 createUnit('rabbit', 7, {57, 68})
-r51=lastCreatedUnit()
-
 createUnit('rabbit', 7, {60, 160})
-r52=lastCreatedUnit()
-
 createUnit('rabbit', 7, {57, 68})
-r53=lastCreatedUnit()
-
 createUnit('rabbit', 7, {60, 160})
-r54=lastCreatedUnit()
-
 createUnit('rabbit', 7, {57, 68})
-r55=lastCreatedUnit()
-
 createUnit('rabbit', 7, {60, 160})
-r56=lastCreatedUnit()
-
-
-
-
-
 </startup>
 		<unitDied>
 		
 unitB = lastDeadUnitKiller()
 unitA = lastDeadUnit()
 
-<!-- if lastDeadUnitCauseOfDeath() ~= 3 then -->
+x = getRandomGen(30, 216)
+y = getRandomGen(42, 226)
 
-	<!-- if unitFaction(unitB) ~= unitFaction(unitA) then -->
+
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
 	
-	   <!-- if lastDeadUnitName() == 'rabbit' then -->
+	    if lastDeadUnitName() == 'rabbit' then
 
-	<!-- giveResource('food', unitFaction(unitB), 12) -->
+			giveResource('food', unitFaction(unitB), 12)
+			createUnit('rabbit', unitFaction(unitA), {x, y})
+			
+				 end
+   end
+ end
+end
 	
-	<!-- elseif lastDeadUnitName() == 'duck' then -->
+ if lastDeadUnitCauseOfDeath() ~= 3 then
 
-	<!-- giveResource('food', unitFaction(unitB), 25) -->
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
 	
-		<!-- elseif lastDeadUnitName() == 'turtle' then -->
+	    if lastDeadUnitName() == 'duck' then
 
-	<!-- giveResource('food', unitFaction(unitB), 40) -->
+			giveResource('food', unitFaction(unitB), 18)
+			createUnit('duck', unitFaction(unitA), {x, y})
+			
+				 end
+   end
+ end
+end
 	
-		<!-- elseif lastDeadUnitName() == 'deer' then -->
+ if lastDeadUnitCauseOfDeath() ~= 3 then
 
-	<!-- giveResource('food', unitFaction(unitB), 150) -->
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
 	
-		<!-- elseif lastDeadUnitName() == 'wolf' then -->
+	    if lastDeadUnitName() == 'turtle' then
 
-	<!-- giveResource('food', unitFaction(unitB), 200) -->
+			giveResource('food', unitFaction(unitB), 23)
+			createUnit('turtle', unitFaction(unitA), {x, y})
+			
+				 end
+   end
+ end
+end
 	
-		<!-- elseif lastDeadUnitName() == 'lion' then -->
+	if lastDeadUnitCauseOfDeath() ~= 3 then
 
-	<!-- giveResource('food', unitFaction(unitB), 250) -->
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
 	
-			<!-- elseif lastDeadUnitName() == 'alligator' then -->
+	    if lastDeadUnitName() == 'deer' then
 
-	<!-- giveResource('food', unitFaction(unitB), 300) -->
+			giveResource('food', unitFaction(unitB), 50)
+			createUnit('deer', unitFaction(unitA), {x, y})
+			
+				 end
+   end
+ end
+end
 	
-		<!-- elseif lastDeadUnitName() == 'bear' then -->
+ if lastDeadUnitCauseOfDeath() ~= 3 then
 
-	<!-- giveResource('food', unitFaction(unitB), 400) -->
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
 	
-		<!-- elseif lastDeadUnitName() == 'triceratops' then -->
+	    if lastDeadUnitName() == 'wolf' then
 
-	<!-- giveResource('food', unitFaction(unitB), 800) -->
-
-
-	<!-- end -->
-  <!-- end -->
-<!-- end -->
-
-
-
-			if lastDeadUnit()==r1 then
-
-
-				createUnit('rabbit', 1, {226, 148})
-				r1= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r2 then
-
-
-				createUnit('rabbit', 1, {234, 51})
-				r2= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r3 then
-
-
-				createUnit('rabbit', 1, {218, 33})
-				r3= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r4 then
-
-				createUnit('rabbit', 1, {208, 67})
-				r4= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r5 then
-
-									createUnit('rabbit', 1, {200, 45})
-				r5= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r6 then
-
-									createUnit('rabbit', 1, {133, 224})
-				r6= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r7 then
-
-									createUnit('rabbit', 1, {200, 47})
-				r7= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r8 then
-
-									createUnit('rabbit', 1, {50, 50})
-				r8= lastCreatedUnit()
-			end
+			giveResource('food', unitFaction(unitB), 55)
+			createUnit('wolf', unitFaction(unitA), {x, y})
 			
-						if lastDeadUnit()==r9 then
+				 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
 
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
+	
+	    if lastDeadUnitName() == 'lion' then
 
-				createUnit('rabbit', 2, {226, 48})
-				r9= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r10 then
-
-
-				createUnit('rabbit', 2, {234, 58})
-				r10= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r11 then
-
-
-				createUnit('rabbit', 2, {218, 33})
-				r11= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r12 then
-
-				createUnit('rabbit', 2, {208, 67})
-				r12= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r13 then
-
-									createUnit('rabbit', 2, {200, 45})
-				r13= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r14 then
-
-									createUnit('rabbit', 2, {133, 170})
-				r14= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r15 then
-
-									createUnit('rabbit', 2, {200, 147})
-				r15= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r16 then
-
-									createUnit('rabbit', 2, {50, 50})
-				r16= lastCreatedUnit()
-			end
+			giveResource('food', unitFaction(unitB), 60)
+			createUnit('lion', unitFaction(unitA), {x, y})
 			
-									if lastDeadUnit()==r17 then
+				 end
+   end
+ end
+end
 
+ if lastDeadUnitCauseOfDeath() ~= 3 then
 
-				createUnit('rabbit', 3, {226, 148})
-				r17= lastCreatedUnit()
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
+	
+	    if lastDeadUnitName() == 'alligator' then
 
-			end
-
-			if lastDeadUnit()==r18 then
-
-
-				createUnit('rabbit', 3, {234, 68})
-				r18= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r19 then
-
-
-				createUnit('rabbit', 3, {218, 150})
-				r19= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r20 then
-
-				createUnit('rabbit', 3, {208, 67})
-				r20= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r21 then
-
-									createUnit('rabbit', 3, {200, 45})
-				r21= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r22 then
-
-									createUnit('rabbit', 3, {133, 224})
-				r22= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r23 then
-
-									createUnit('rabbit', 3, {200, 147})
-				r23= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r24 then
-
-									createUnit('rabbit', 3, {50, 50})
-				r24= lastCreatedUnit()
-			end
+			giveResource('food', unitFaction(unitB), 70)
+			createUnit('alligator', unitFaction(unitA), {x, y})
 			
-						if lastDeadUnit()==r25 then
+				 end
+   end
+ end
+end
+	
+	if lastDeadUnitCauseOfDeath() ~= 3 then
 
-									createUnit('rabbit', 4, {133, 224})
-				r25= lastCreatedUnit()
-			end
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
+	
+	    if lastDeadUnitName() == 'bear' then
 
-			if lastDeadUnit()==r26 then
-
-									createUnit('rabbit', 4, {200, 147})
-				r26= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r27 then
-
-									createUnit('rabbit', 4, {50, 50})
-				r27= lastCreatedUnit()
-			end
+			giveResource('food', unitFaction(unitB), 80)
+			createUnit('alligator', unitFaction(unitA), {x, y})
 			
-						if lastDeadUnit()==r28 then
+				 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
 
-									createUnit('rabbit', 4, {50, 50})
-				r28= lastCreatedUnit()
-			end
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) ~= 0 then
+	
+	    if lastDeadUnitName() == 'triceratops' then
+
+			giveResource('food', unitFaction(unitB), 100)
+			createUnit('alligator', unitFaction(unitA), {x, y})
 			
-						if lastDeadUnit()==r29 then
-
-
-				createUnit('rabbit', 4, {226, 48})
-				r29= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r30 then
-
-
-				createUnit('rabbit', 4, {234, 48})
-				r30= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r31 then
-
-
-				createUnit('rabbit', 4, {218, 100})
-				r31= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r32 then
-
-				createUnit('rabbit', 4, {208, 67})
-				r32= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r33 then
-
-									createUnit('rabbit', 5, {200, 45})
-				r33= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r34 then
-
-									createUnit('rabbit', 5, {133, 128})
-				r34= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r35 then
-
-									createUnit('rabbit', 5, {200, 46})
-				r35= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r36 then
-
-									createUnit('rabbit', 5, {50, 50})
-				r36= lastCreatedUnit()
-			end
-			
-						if lastDeadUnit()==r37 then
-
-
-				createUnit('rabbit', 5, {226, 148})
-				r37= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r38 then
-
-
-				createUnit('rabbit', 5, {234, 128})
-				r38= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r39 then
-
-
-				createUnit('rabbit', 5, {218, 55})
-				r39= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r40 then
-
-				createUnit('rabbit', 5, {208, 67})
-				r40= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r41 then
-
-									createUnit('rabbit', 6, {200, 45})
-				r41= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r42 then
-
-									createUnit('rabbit', 6, {133, 224})
-				r42= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r43 then
-
-									createUnit('rabbit', 6, {200, 147})
-				r43= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r44 then
-
-									createUnit('rabbit', 6, {50, 50})
-				r44= lastCreatedUnit()
-			end
-			
-									if lastDeadUnit()==r45 then
-
-
-				createUnit('rabbit', 6, {226, 148})
-				r45= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r46 then
-
-
-				createUnit('rabbit', 6, {234, 100})
-				r46= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r47 then
-
-
-				createUnit('rabbit', 6, {218, 96})
-				r47= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r48 then
-
-				createUnit('rabbit', 6, {208, 67})
-				r48= lastCreatedUnit()
-
-			end
-
-			if lastDeadUnit()==r49 then
-
-									createUnit('rabbit', 7, {200, 45})
-				r49= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r50 then
-
-									createUnit('rabbit', 7, {133, 224})
-				r50= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r51 then
-
-									createUnit('rabbit', 7, {200, 147})
-				r51= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r52 then
-
-									createUnit('rabbit', 7, {50, 50})
-				r52= lastCreatedUnit()
-			end
-			
-						if lastDeadUnit()==r53 then
-
-									createUnit('rabbit', 7, {133, 224})
-				r53= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r54 then
-
-									createUnit('rabbit', 7, {200, 147})
-				r54= lastCreatedUnit()
-			end
-
-			if lastDeadUnit()==r55 then
-
-									createUnit('rabbit', 7, {50, 50})
-				r55= lastCreatedUnit()
-			end
-			
-						if lastDeadUnit()==r56 then
-
-									createUnit('rabbit', 7, {50, 50})
-				r56= lastCreatedUnit()
-			end
-			
-						if lastDeadUnit()==you then
-
-				createUnit('rabbit', 0, startLocation(0))
-				you= lastCreatedUnit()
-				setCameraPosition(unitPosition(you))
-
-
-
-			end
-			
-			
-
+				 end
+   end
+ end
+end
+ 
+  if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'rabbit' then
+
+			giveResource('food', unitFaction(unitB), 12)
+			createUnit('rabbit', 0, {x, y})
+			setCameraPosition({x, y})
+	
+		 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'duck' then
+
+	 giveResource('food', unitFaction(unitB), 18)
+	 createUnit('duck', 0, {x, y})
+	 setCameraPosition({x, y})
+	 
+	 	 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'turtle' then
+
+	 giveResource('food', unitFaction(unitB), 23)
+	 createUnit('turtle', 0, {x, y})
+	 setCameraPosition({x, y})
+	 
+	 	 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'deer' then
+	 giveResource('food', unitFaction(unitB), 50)
+	 createUnit('deer', 0, {x, y})
+	 setCameraPosition({x, y})
+	 
+	 	 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'wolf' then
+	 giveResource('food', unitFaction(unitB), 55)
+	 createUnit('wolf', 0, {x, y})
+	 setCameraPosition({x, y})
+	 
+	 	 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'lion' then
+
+	 giveResource('food', unitFaction(unitB), 60)
+	 createUnit('lion', 0, {x, y})
+	 setCameraPosition({x, y})
+	 
+	 	 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'alligator' then
+
+	 giveResource('food', unitFaction(unitB), 70)
+	 createUnit('alligator', 0, {x, y})
+	 setCameraPosition({x, y})
+	 
+	 	 end
+   end
+ end
+end
+	
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'bear' then
+
+	 giveResource('food', unitFaction(unitB), 80)
+	 createUnit('alligator', 0, {x, y})
+	 setCameraPosition({x, y})
+	 
+	 	 end
+   end
+ end
+end
+	
+	if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	 
+	  if unitFaction(unitA) == 0 then
+	
+	    if lastDeadUnitName() == 'triceratops' then
+
+	 giveResource('food', unitFaction(unitB), 100)
+	 createUnit('alligator', 0, {x, y})
+	 setCameraPosition({x, y})
+
+	 end
+   end
+ end
+end
 		</unitDied>	
 <cellTriggerEvent>   
 </cellTriggerEvent>
