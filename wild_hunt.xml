@@ -509,11 +509,54 @@ end
 	 createUnit('alligator', 0, {x, y})
 	 setCameraPosition({x, y})
 
+ if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	 if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	    if lastDeadUnitName() == 'rabbit' then
+
+	 giveResource('food', unitFaction(unitB), 12)
+	
+	 elseif lastDeadUnitName() == 'duck' then
+
+	 giveResource('food', unitFaction(unitB), 25)
+	
+		 elseif lastDeadUnitName() == 'turtle' then
+
+	 giveResource('food', unitFaction(unitB), 40)
+	
+		 elseif lastDeadUnitName() == 'deer' then
+
+	 giveResource('food', unitFaction(unitB), 150)
+	
+		 elseif lastDeadUnitName() == 'wolf' then
+
+	 giveResource('food', unitFaction(unitB), 200)
+	
+		 elseif lastDeadUnitName() == 'lion' then
+
+	 giveResource('food', unitFaction(unitB), 250)
+	
+			 elseif lastDeadUnitName() == 'alligator' then
+
+	 giveResource('food', unitFaction(unitB), 300)
+	
+		 elseif lastDeadUnitName() == 'bear' then
+
+	 giveResource('food', unitFaction(unitB), 400)
+	
+		 elseif lastDeadUnitName() == 'triceratops' then
+
+	 giveResource('food', unitFaction(unitB), 800)
+
 	 end
    end
  end
 end
 
+	 end
+   end
+ end
 
 			<!-- if lastDeadUnit()==r1 then -->
 
