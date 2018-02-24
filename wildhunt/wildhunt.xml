@@ -72,7 +72,7 @@
 						<damage-multiplier attack="piercing___" armor="skin____" value="-900"/>
 
 		
-		<damage-multiplier attack="slashing_" armor="organic_" value="-900"/>
+		<damage-multiplier attack="slashing_" armor="organic__" value="-900"/>
 		<damage-multiplier attack="slashing_" armor="skin_____" value="-900"/>
 
 		<damage-multiplier attack="piercing" armor="skin_____" value="-900"/>
@@ -80,7 +80,7 @@
 				<damage-multiplier attack="piercing" armor="organic__" value="-900"/>
 
 		
-		<damage-multiplier attack="piercing_" armor="organic_" value="-900"/>
+		<damage-multiplier attack="piercing_" armor="organic__" value="-900"/>
 		
 
 
